@@ -1,31 +1,35 @@
-//import './App.css'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
     <>
-      <MercedesGclass />
-      <MercedesGclass />
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   )
 }
-
-const MercedesGclass = () =>{
-
-  const name = "Mercedes G-Wagon";
-  const price = "4.7 Crores";
-  const summary = "The Mercedes-Benz G-Class G63 AMG (often simply called the G63) is a high-performance variant of the iconic G-Class SUV, renowned for its rugged yet luxurious design. It combines the boxy, traditional aesthetic of the G-Class with extreme performance capabilities thanks to AMG's engineering expertise. ";
-   return(
-    <div>
-      <div>
-        <img src=".\car.jpg" width='50%' height='35%'></img>
-       </div>
-        <h2>Name: {name}</h2>
-        <h3>Price: {price} </h3>
-        <p>Summary: {summary} </p>
-        <button>Purchase Now</button>
-   </div>
-   );
-};
 
 export default App
